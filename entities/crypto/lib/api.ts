@@ -3,7 +3,7 @@ import type { CryptoHistory, CryptoInfo } from '../model/types'
 
 const API_URL = 'https://api.coincap.io/v2'
 
-export const axiosInstance = axios.create({
+const axiosInstance = axios.create({
   baseURL: API_URL,
   timeout: 5000,
 })

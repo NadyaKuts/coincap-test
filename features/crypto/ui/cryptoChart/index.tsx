@@ -16,11 +16,11 @@ type CryptoChartProps = {
   onTimeRangeChange: (range: string) => void
 }
 
-export const CryptoChart = ({
+export default function CryptoChart({
   id,
   timeRange,
   onTimeRangeChange,
-}: CryptoChartProps) => {
+}: CryptoChartProps) {
   const { data, isLoading, error } = useCryptoHistory(id, timeRange)
 
   if (error) return <div className='text-red-500'>Error loading chart data</div>

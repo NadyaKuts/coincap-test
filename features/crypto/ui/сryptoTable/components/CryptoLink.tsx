@@ -6,12 +6,14 @@ type CryptoLinkProps = {
   className?: string
 }
 
-export const CryptoLink = ({
+export default function CryptoLink({
   to,
   children,
   className = '',
-}: CryptoLinkProps) => (
-  <Link to={to} className={`block transition-colors ${className}`}>
-    {children}
-  </Link>
-)
+}: CryptoLinkProps) {
+  return (
+    <Link to={to} className={`block transition-colors ${className}`}>
+      {children}
+    </Link>
+  )
+}

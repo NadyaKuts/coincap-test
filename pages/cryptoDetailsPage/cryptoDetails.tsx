@@ -1,9 +1,9 @@
-import { useCryptoDetails } from 'features/crypto/lib/hooks'
-import { CryptoChart } from 'features/crypto/ui/cryptoChart'
+import { CryptoChart, useCryptoDetails } from 'features/crypto'
 import { useState } from 'react'
 import { useParams } from 'react-router'
+import { MetricItem } from 'shared/ui'
 
-export const CryptoDetailsPage = () => {
+export default function CryptoDetailsPage() {
   const { id } = useParams<{ id: string }>()
   const [timeRange, setTimeRange] = useState('d1') // d1 = 1 day interval
 
@@ -93,28 +93,3 @@ export const CryptoDetailsPage = () => {
     </div>
   )
 }
-
-const MetricItem = ({
-  label,
-  value,
-  isPositive,
-}: {
-  label: string
-  value: string
-  isPositive?: boolean
-}) => (
-  <div className='flex justify-between'>
-    <span className='text-gray-600'>{label}</span>
-    <span
-      className={`font-medium ${
-        isPositive !== undefined
-          ? isPositive
-            ? 'text-green-500'
-            : 'text-red-500'
-          : ''
-      }`}
-    >
-      {value}
-    </span>
-  </div>
-)

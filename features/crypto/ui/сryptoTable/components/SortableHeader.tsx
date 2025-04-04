@@ -5,10 +5,10 @@ type SortableHeaderProps<T> = {
   title: string
 }
 
-export const SortableHeader = <T,>({
+export default function SortableHeader<T>({
   column,
   title,
-}: SortableHeaderProps<T>) => {
+}: SortableHeaderProps<T>) {
   const sortDirection = column.getIsSorted()
   const arrow = sortDirection ? (sortDirection === 'asc' ? ' ↑' : ' ↓') : ' ↔'
 

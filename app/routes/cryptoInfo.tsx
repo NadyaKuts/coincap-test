@@ -1,4 +1,4 @@
-import { CryptoDetailsPage } from 'pages/cryptoDetailsPage'
+import CryptoDetailsPage from 'pages/cryptoDetailsPage/cryptoDetails'
 import type { Route } from './+types/home'
 
 export function meta({}: Route.MetaArgs) {

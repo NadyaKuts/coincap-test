@@ -1,6 +1,6 @@
-import { CryptoTable } from 'features/crypto/ui/сryptoTable'
+import { CryptoTable } from 'features/crypto'
 
-export const HomePage = () => {
+export default function HomePage() {
   return (
     <div className='container mx-auto p-4 max-w-6xl'>
       <h1 className='text-2xl px-4 pt-4'>Crypto Market Dashboard</h1>

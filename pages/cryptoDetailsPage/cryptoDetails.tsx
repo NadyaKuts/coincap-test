@@ -5,7 +5,7 @@ import { MainPageButton, MetricItem } from 'shared/ui'
 
 export default function CryptoDetailsPage() {
   const { id } = useParams<{ id: string }>()
-  const [timeRange, setTimeRange] = useState('d1') // d1 = 1 day interval
+  const [timeRange, setTimeRange] = useState('d1')
 
   const { data: crypto, isLoading, error } = useCryptoDetails(id!)
 

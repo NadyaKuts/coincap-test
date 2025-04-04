@@ -50,7 +50,7 @@ export default function CryptoDetailsPage() {
         <div className='bg-white p-6 rounded-lg shadow-md'>
           <h2 className='text-xl font-semibold mb-4'>Key Metrics</h2>
           <div className='space-y-3'>
-            <MetricItem label='Rank' value={`#${crypto.rank}`} />
+            <MetricItem label='Rank' value={crypto.rank} />
             <MetricItem
               label='Market Cap'
               value={`$${parseFloat(crypto.marketCapUsd).toLocaleString('en-US')}`}

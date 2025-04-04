@@ -23,11 +23,18 @@ export default function CryptoChart({
 }: CryptoChartProps) {
   const { data, isLoading, error } = useCryptoHistory(id, timeRange)
 
-  if (error) return <div className='text-red-500'>Error loading chart data</div>
+  if (error)
+    return (
+      <div className='flex bg-white justify-center items-center p-4 rounded-lg shadow-md h-140 text-red-500 text-2xl '>
+        Error loading chart data
+      </div>
+    )
 
   if (isLoading)
     return (
-      <div className='bg-gray-300 p-4 rounded-lg shadow-md h-140 animate-pulse' />
+      <div className='flex bg-gray-300 justify-center items-center p-4 rounded-lg shadow-md h-140 text-gray-600 text-2xl animate-pulse'>
+        Loading chart...
+      </div>
     )
 
   const chartData = data?.map((item) => ({

@@ -1,7 +1,7 @@
 import { CryptoChart, useCryptoDetails } from 'features/crypto'
 import { useState } from 'react'
 import { useParams } from 'react-router'
-import { MetricItem } from 'shared/ui'
+import { MainPageButton, MetricItem } from 'shared/ui'
 
 export default function CryptoDetailsPage() {
   const { id } = useParams<{ id: string }>()
@@ -32,6 +32,7 @@ export default function CryptoDetailsPage() {
 
   return (
     <div className='container mx-auto p-4 max-w-6xl'>
+      <MainPageButton />
       <div className='mb-8'>
         <h1 className='text-3xl font-bold mb-2'>
           {crypto.name} ({crypto.symbol})
